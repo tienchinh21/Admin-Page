@@ -1,25 +1,33 @@
-import logo from './logo.svg';
+import '@fortawesome/fontawesome-free/css/all.css';
+import { pageAdminRoute } from './router/router';
+import { BrowserRouter, Routes, Route } from "react-router-dom";
+
 import './App.css';
 
 function App() {
-  return (
-    <div className="App">
-      <header className="App-header">
-        <img src={logo} className="App-logo" alt="logo" />
-        <p>
-          Edit <code>src/App.js</code> and save to reload.
-        </p>
-        <a
-          className="App-link"
-          href="https://reactjs.org"
-          target="_blank"
-          rel="noopener noreferrer"
-        >
-          Learn React
-        </a>
-      </header>
-    </div>
-  );
+    return (
+        <div className="wrapper">
+            <BrowserRouter>
+                <Routes>
+                    {pageAdminRoute.map((route, index) => {
+                        const Page = route.page;
+
+                        return (
+                            <Route
+                                key={index}
+                                path={route.path}
+                                element={<Page />}
+                            />
+                        )
+                    })}
+                </Routes>
+            </BrowserRouter>
+        </div>
+    );
 }
 
+
+
 export default App;
+
+
