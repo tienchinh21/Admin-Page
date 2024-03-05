@@ -6,6 +6,11 @@ p {
     margin: 0;
 }
 
+.d-a {
+    display: flex;
+    align-items: center;
+}
+
 .card-total {
     width: 25%;
     padding-left: 20px;
@@ -15,7 +20,6 @@ p {
 .card-total .card-img {
     position: relative;
     color: #fff;
-    border-radius: 5px;
 }
 
 .card-total .card-img .card-body {
@@ -64,6 +68,16 @@ p {
     font-size: 12px;
     margin-top: 15px;
     margin-bottom: 15px;
+    align-items: center;
+    display: flex;
+}
+
+.css-wn5hww-MuiLineElement-root {
+    stroke-width: 1px !important;
+}
+
+text {
+    font-size: 10px;
 }
 
 /* End cSS dashboard total */
@@ -128,7 +142,8 @@ p {
 .info-box-content .progress-description {
     font-size: 75%;
     margin-bottom: 5px;
-    display: block;
+    display: flex;
+    align-items: center;
 }
 
 /* End css */
@@ -199,12 +214,12 @@ p {
 
 
 /* -- Css dashboard-ticket-section-- */
-.pd-f {
-    padding-left: 15px;
+.mg-f {
+    margin-left: 20px;
 }
 
-.pd-r {
-    padding-right: 15px;
+.mg-r {
+    margin-right: 20px;
 }
 
 .col-md-6 {

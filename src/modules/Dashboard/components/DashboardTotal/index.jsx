@@ -214,8 +214,8 @@ const DashboardTotal = () => {
                                         data: [2, 5.5, 2, 8.5, 1.5, 5],
                                     },
                                 ]}
-                                width={800}
-                                height={300}
+                                width={1500}
+                                height={500}
                             />
                         </div>
                     </div>
@@ -233,6 +233,7 @@ const DashboardTotal = () => {
                         <Divider />
                         <div className='total-sale-graph'>
                             <LineChart
+                                sx={{ width: "100%" }}
                                 xAxis={[{ data: [1, 2, 3, 5, 8, 10] }]}
                                 series={[
                                     {
@@ -272,7 +273,7 @@ const DashboardTotal = () => {
                 </div>
             </div>
             <div className="row dashboard-ticket-section">
-                <div className="col-md-6 box pd-f pd-r">
+                <div className="col-md-6 box mg-f mg-r">
                     <div className='table-wrapper'>
                         <div className='box-header'>
                             <h3 class="box-title-table box-title">
@@ -282,12 +283,12 @@ const DashboardTotal = () => {
                         <div className="table">
                             <thead>
                                 <tr>
-                                    <th style={{ width: '65%' }}>Subject</th>
-                                    <th style={{ width: '15%' }}>Priority</th>
-                                    <th>
-                                        <ChatBubbleIcon />
+                                    <th className='d-a' style={{ width: '65%' }}>Subject</th>
+                                    <th className='d-a' style={{ width: '15%' }}>Priority</th>
+                                    <th className='d-a' style={{ width: '6%' }}>
+                                        <ChatBubbleIcon sx={{ fontSize: '25px !important' }} />
                                     </th>
-                                    <th style={{ width: '15%' }}>Last update</th>
+                                    <th className='d-a' style={{ width: '15%' }}>Last update</th>
                                 </tr>
                             </thead>
                             <tbody className='w100-f box-body' style={{ alignItems: 'center', flexWrap: 'wrap' }}>
@@ -370,7 +371,7 @@ const DashboardTotal = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-md-3 box pd-f pd-r">
+                <div className="col-md-3 box mg-f mg-r">
                     <div className='table-wrapper'>
                         <div className='box-header'>
                             <h3 class="box-title-table box-title">
@@ -380,9 +381,9 @@ const DashboardTotal = () => {
                         <div className="table">
                             <thead>
                                 <tr>
-                                    <th style={{ width: '60%' }}>Subject</th>
+                                    <th style={{ width: '59%' }}>Subject</th>
                                     <th>
-                                        <ChatBubbleIcon />
+                                        <ChatBubbleIcon sx={{ fontSize: '25px !important' }} />
                                     </th>
                                     <th style={{ width: '35%' }}>Last update</th>
                                 </tr>
@@ -472,7 +473,7 @@ const DashboardTotal = () => {
                         </div>
                     </div>
                 </div>
-                <div className="col-md-3 box pd-f pd-r">
+                <div className="col-md-3 box mg-f mg-r">
                     <div className='table-wrapper'>
                         <div className='box-header'>
                             <h3 class="box-title-table box-title">
@@ -482,9 +483,9 @@ const DashboardTotal = () => {
                         <div className="table">
                             <thead>
                                 <tr>
-                                    <th style={{ width: '60%' }}>Subject</th>
+                                    <th style={{ width: '59%' }}>Subject</th>
                                     <th>
-                                        <ChatBubbleIcon />
+                                        <ChatBubbleIcon sx={{ fontSize: '25px !important' }} />
                                     </th>
                                     <th style={{ width: '35%' }}>Last update</th>
                                 </tr>

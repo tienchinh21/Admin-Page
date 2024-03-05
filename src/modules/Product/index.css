@@ -136,10 +136,6 @@ button {
     transition: transform 0.3s ease;
 }
 
-.box-body {
-    padding: 10px;
-}
-
 .form-header {
     color: #444;
     margin-bottom: 10px;
