@@ -282,7 +282,7 @@ const DashboardTotal = () => {
                         </div>
                         <div className="table">
                             <thead>
-                                <tr>
+                                <tr style={{ display: 'flex' }}>
                                     <th className='d-a' style={{ width: '65%' }}>Subject</th>
                                     <th className='d-a' style={{ width: '15%' }}>Priority</th>
                                     <th className='d-a' style={{ width: '6%' }}>
