@@ -19,7 +19,7 @@
 }
 
 .mt20 {
-    margin-top: 20px;
+    margin-top: 10px;
 }
 
 .btn {
@@ -32,14 +32,17 @@
     font-weight: 600;
     font-size: 10px;
     text-transform: uppercase;
+    cursor: pointer;
 }
 
 .btn-find {
     float: right;
+    padding: 10px;
 }
 
 .box-body .btn-group {
     float: left;
+    padding: 10px;
 }
 
 .btn-default {
@@ -98,42 +101,59 @@ button {
     left: 0;
     width: 100%;
     height: 100%;
-    background: rgba(0, 0, 0, 0.5);
-    z-index: 9999;
+    z-index: 1300;
     overflow: hidden;
     opacity: 0;
     display: flex;
     justify-content: center;
-    align-items: center;
+    align-items: flex-start;
     transition: opacity 0.3s ease, height 0s 0.3s;
 }
 
 .popup-content {
-    position: relative;
-    width: 500px;
-    height: 400px;
+    position: fixed;
+    top: 30px;
+    left: 50%;
+    transform: translateX(-50%);
+    width: 600px;
+    height: 300px;
     background: #fff;
-    z-index: 10000;
-    border-radius: 10px;
+    z-index: 100;
     overflow: hidden;
     box-shadow: 0px 0px 10px rgba(0, 0, 0, 0.3);
     transition: transform 0.3s ease;
-    transform: translateY(-100%);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    top: 10%;
 }
 
 .popup-inner {
     padding: 20px;
+    position: relative;
+    width: 100%;
 }
 
 .popup-overlay.active {
     opacity: 1;
     height: 100%;
     transition: opacity 0.3s ease;
+    background-color: rgba(0, 0, 0, 0.85);
 }
 
 .popup-content.active {
-    transform: translateY(0);
     transition: transform 0.3s ease;
+}
+
+.popup-inner button {
+    position: relative;
+    z-index: 1;
+}
+
+.MuiTooltip-tooltip {
+    z-index: 99999;
+    position: relative;
+    display: block;
 }
 
 .form-header {
@@ -152,7 +172,7 @@ button {
     margin-bottom: 15px;
 }
 
-.form-group label {
+label {
     font-weight: 600;
     font-size: 11px;
     text-transform: uppercase;
@@ -191,8 +211,8 @@ input:focus {
     width: 100%;
 }
 
-.w-65 {
-    width: 65%;
+.w-75 {
+    width: 75%;
 }
 
 .big-input {
@@ -200,9 +220,16 @@ input:focus {
 }
 
 .form-footer {
-    position: absolute;
-    bottom: 20px;
-    right: 40px;
+    width: 100%;
+    display: flex;
+    justify-content: flex-end;
+    margin-top: 25px;
+}
+
+.help-block {
+    display: block;
+    color: #737373;
+    font-size: 12px;
 }
 
 .btn-new {
@@ -214,7 +241,6 @@ input:focus {
 .btn-save {
     display: flex;
     justify-content: center;
-    font-size: 13px;
 }
 
 .collapsed-box {
@@ -231,4 +257,47 @@ input:focus {
     align-items: center;
     justify-content: center;
 
+}
+
+.MuiDataGrid-columnHeader .MuiDataGrid-columnHeader--alignCenter .MuiDataGrid-withBorderColor .MuiDataGrid-columnHeaderCheckbox {
+    width: 200px !important;
+}
+
+.MuiDataGrid-columnHeader {
+    min-width: 200px !important;
+}
+
+.MuiDataGrid-cell--withRenderer {
+    min-width: 200px !important;
+}
+
+.MuiDataGrid-cell {
+    min-width: 200px !important;
+}
+
+/* .css-gl260s-MuiDataGrid-columnHeadersInner {
+    justify-content: center !important;
+    align-items: center !important;
+} */
+
+.css-1iyq7zh-MuiDataGrid-columnHeaders {
+    display: block !important;
+    width: 100%;
+}
+
+.MuiDataGrid-withBorderColor {
+    display: none;
+}
+
+.icon-input {
+    padding: 6px 6px;
+    height: 34px;
+    border: 1px solid #d2d6de;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.css-155rvee-MuiResponsiveChart-container {
+    width: 100% !important;
 }

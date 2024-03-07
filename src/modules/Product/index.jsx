@@ -7,6 +7,7 @@ import EditIcon from '@mui/icons-material/Edit';
 import DeleteIcon from '@mui/icons-material/Delete';
 import Tooltip from '@mui/material/Tooltip';
 import Divider from '@mui/material/Divider';
+import QuestionMarkIcon from '@mui/icons-material/QuestionMark';
 
 
 
@@ -80,7 +81,7 @@ const columns = [
                 <Tooltip title="Edit">
                     <button className='btn-options' ><EditIcon sx={{ fontSize: 13 }} /></button>
                 </Tooltip>
-                <Tooltip title="Delete">
+                <Tooltip Tooltip title="Delete">
                     <button className='btn-options' ><DeleteIcon sx={{ fontSize: 13 }} /></button>
                 </Tooltip>
             </div>
@@ -102,15 +103,22 @@ const rows = [
 const getRowClassName = () => 'custom-row';
 const getRowHeight = () => 35;
 
+const styles = {
+    root: {
+        height: '100%', // Chiều cao full màn hình
+        width: '100%', // Chiều rộng full màn hình
+    },
+};
 
-const containerWidth = 1150;
-const numColumns = columns.length;
-const columnWidth = containerWidth / numColumns;
 
-const updatedColumns = columns.map(column => ({
-    ...column,
-    width: columnWidth,
-}));
+// const containerWidth = 1150;
+// const numColumns = columns.length;
+// const columnWidth = containerWidth / numColumns;
+
+// const updatedColumns = columns.map(column => ({
+//     ...column,
+//     width: columnWidth,
+// }));
 
 function Popup(props) {
     const { show, onClose, children } = props;
@@ -165,19 +173,37 @@ const Product = () => {
                                                 </select>
                                             </div>
                                             <div className='row-form'>
-                                                <div className='w-65'>
+                                                <div className='w-75'>
                                                     <label for="value">Attribute value*</label>
-                                                    <input className='select-form-Gr big-input' placeholder="Attribute value" required="" name="value" type="text" id="value" />
+                                                    <div style={{ display: 'flex' }}>
+                                                        <input className='select-form-Gr big-input' placeholder="Attribute value" required="" name="value" type="text" id="value" />
+
+                                                        <Tooltip Tooltip title="This value will on the product select table option" placement='top' arrow>
+                                                            <button className='icon-input'>
+                                                                <QuestionMarkIcon sx={{ fontSize: 15 }} />
+                                                            </button>
+                                                        </Tooltip>
+                                                    </div>
                                                 </div>
-                                                <div>
+                                                <div style={{ marginLeft: 5 }}>
                                                     <label for="order">List order</label>
-                                                    <input className='select-form-Gr' placeholder="Viewing order" name="order" type="number" id="order" />
+                                                    <div style={{ display: 'flex' }}>
+                                                        <input className='select-form-Gr' placeholder="Viewing order" name="order" type="number" id="order" />
+                                                        <Tooltip Tooltip title="Vewing oder on the list" placement='top' arrow>
+                                                            <button className='icon-input'>
+                                                                <QuestionMarkIcon sx={{ fontSize: 15 }} />
+                                                            </button>
+                                                        </Tooltip>
+                                                    </div>
                                                 </div>
                                             </div>
+                                            <p class="help-block">* Required fields.</p>
                                         </div>
                                         <div className="form-footer">
                                             <div className='btn-new'>
-                                                <span className='btn-save'>SAVE</span>
+                                                <span className='btn-save'>
+                                                    <button style={{ fontSize: 12, padding: '5px', width: '100%', background: '#555', color: '#fff', cursor: 'pointer' }} className=''>SAVE</button>
+                                                </span>
                                             </div>
                                         </div>
                                     </form>
@@ -214,10 +240,10 @@ const Product = () => {
                             <span>Copy</span>
                         </button>
                     </div>
-                    <div style={{ height: 350, width: '100%', display: 'flex', paddingTop: 20 }}>
+                    <div style={{ height: 350, width: '100%', display: 'flex', padding: 10 }}>
                         <DataGrid
                             rows={rows}
-                            columns={updatedColumns}
+                            columns={columns}
                             getRowClassName={getRowClassName}
                             getRowHeight={getRowHeight}
                             initialState={{
@@ -227,6 +253,7 @@ const Product = () => {
                             }}
                             pageSizeOptions={[5, 10]}
                             checkboxSelection
+                            classes={styles}
                         />
                     </div>
                 </div>

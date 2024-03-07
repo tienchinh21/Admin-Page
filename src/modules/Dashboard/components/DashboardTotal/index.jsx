@@ -214,7 +214,7 @@ const DashboardTotal = () => {
                                         data: [2, 5.5, 2, 8.5, 1.5, 5],
                                     },
                                 ]}
-                                width={1500}
+                                width={1200}
                                 height={500}
                             />
                         </div>

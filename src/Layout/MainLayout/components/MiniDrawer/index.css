@@ -71,15 +71,20 @@ ul {
 
 .note {
     position: absolute;
-    z-index: 100;
-    top: 11px;
-    left: 29px;
-    width: 10px;
-    height: 10px;
-    background: #00a56a;
+    top: 9px;
+    right: 7px;
+    text-align: center;
     font-size: 9px;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border-radius: 3px;
+    padding: 2px 3px;
+    line-height: 0.9;
+    background-color: #00a65a !important;
+    color: #fff;
+}
+
+.css-12i7wg6-MuiPaper-root-MuiDrawer-paper {
+    background-color: #222d32 !important;
+}
+
+.css-hyum1k-MuiToolbar-root {
+    padding-right: 0px !important;
 }

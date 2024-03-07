@@ -330,3 +330,31 @@ th {
 }
 
 /* -- Css dashboard-ticket-section-- */
+
+.css-u59zwl-MuiResponsiveChart-container {
+    width: 100% !important;
+}
+
+.css-wa5fuu-MuiListItemIcon-root {
+    color: #fff !important;
+}
+
+.MuiList-root {
+    color: #fff !important;
+}
+
+.MuiListItemIcon-root {
+    color: #fff !important;
+}
+
+.MuiTypography-root {
+    color: #fff !important;
+}
+
+.MuiButtonBase-root {
+    color: #fff !important;
+}
+
+.MuiSvgIcon-root {
+    color: #333;
+}

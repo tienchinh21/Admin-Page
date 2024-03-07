@@ -158,7 +158,7 @@ function MiniDrawer({ children }) {
                                 <li style={{ position: 'relative' }}>
                                     <a className='link-header' href="">
                                         <EmailIcon sx={{ width: 17, height: 17 }} />
-                                        <span className='title note'>1</span>
+                                        <span className='note'>1</span>
                                     </a>
                                 </li>
                                 <li>
